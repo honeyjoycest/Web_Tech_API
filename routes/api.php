@@ -19,4 +19,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/movies',[MovieController::class,'index']);
+Route::post('login',[MovieController::class,'login']);
+Route::post('register',[MovieController::class,'register']);
+Route::post('reset-password',[MovieController::class,'resetPassword']);
